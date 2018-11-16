@@ -1,0 +1,10 @@
+#lang racket
+
+
+(define (fak x counter)
+  (if (= counter 1)
+      x
+      (fak (* x (- counter 1)) (- counter 1))))
+
+(define (count-perm x)
+  (fak x x))
